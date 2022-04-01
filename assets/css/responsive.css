@@ -1,0 +1,587 @@
+@media screen and (max-width: 767px){
+
+    nav button{
+        border: none !important;
+    }
+    p{
+        font-size: .8rem;
+    }
+
+    h1{
+        font-size: 2rem !important;
+    }
+
+    h2{
+        font-size: 1.5rem !important ;
+    }
+
+    .selected-options .btns button{
+        width: 50% !important;
+    }
+
+    .selected-options .btns{
+        width: 100% !important;
+    }
+
+    .options-list{
+        width: 100%;
+        height: 15vh;
+        overflow-y: scroll;
+        overflow-x: unset;
+
+    }
+
+    .message-container h1, .claim-report-form h1{
+        font-size: 1.5rem !important;
+    }
+
+    #homepageBackground{
+        width: 100%;
+    }
+
+    #navbarSupportedContent {
+        background: var(--primary-color-theme);
+        position: fixed;
+        top: 0;
+        width: 60%;
+        right: 0;
+        height: 100vh;
+        z-index: 10;
+    }
+
+    #homepageBackground {
+        background-position-x: 30%;
+        background-size: 602px;
+    }
+
+    #navbarSupportedContent #menuItems {
+        margin-top: 10%;
+    }
+    #navbarSupportedContent #menuItems a{
+        color: white !important;
+    }
+
+    #navbarSupportedContent .right{
+        margin-left: 15%;
+    }
+    #navbarSupportedContent .right a.login{
+        text-align: left;
+        padding-left: 0;
+        color: white;
+    }
+
+    #navbarSupportedContent .right a.btn.btn-theme{
+        background: white;
+        color: var(--primary-color-theme);
+        width: 75%;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    .dropdown-toggle::after, .lines{
+        display: none;
+    }
+
+
+    .banner>div{
+        flex-direction: column-reverse;
+    }
+
+    .banner>div>div{
+        width: 100%;
+    }
+
+    .banner .right{
+        margin-left: 20%;
+    }
+
+    .banner .small-icons {
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .banner .container-fluid.banner{
+        margin-top: 5%;
+    }
+
+    .banner .container-fluid.banner a{
+        width: 100% !important;
+        height: 50px !important;
+    }
+
+    #section-logos{
+        margin: 30px 0 ;
+    }
+
+    .section02\.1 .content, .section02\.2 .content > div,.section03 .list-icons{
+        flex-direction: column;
+        padding-left: 0 !important;
+    }
+
+    .section02\.2 .content div{
+        margin: 0 !important;
+    }
+
+    .section02\.2 .content,.section05\.1,.section05\.2,.section02\.1,.section03 .list-icons, .section04\.2{
+        margin-top: 3rem;
+    }
+
+    .section02\.2 .content .btn a{
+        width: 75% !important;
+        font-size: 1.2rem;
+    }
+
+    .section02\.2 .content .item img{
+        width: 20%;
+        margin-bottom: 1rem;
+    }
+
+    .section02\.2 .content .item h3{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .About-section2,.claim-report-form,.theme-navabar, #AboutBackground, #section-logos > div, #section02 > div, .quote-response-form, .compare-page, .medical-insurance{
+        width: 90% !important;
+    }
+
+    #quote-response .quote-options{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .selected-options .option img{
+        width: 100px !important;
+    }
+    .selected-options .option .desc,.selected-options .option{
+        padding: 10px !important;
+    }
+
+    .selected-options .option .content p, .selected-options .option .content h4, .selected-options .option .content h6{
+        margin: 0!important;
+    }
+
+    #quote-response .filter,#quote-response .download-section{
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        font-size: .6rem;
+    }
+
+    #quote-response .quote-id h6, #quote-response .btn-download-quote{
+        font-size: .7rem !important;
+    }
+
+    #quote-response .btn-download-quote img{
+        width: 20%;
+    }
+
+    #quote-response .quote-options .quote-item{
+        margin-bottom: 1rem;
+    }
+
+    #submitRequestPage .submit-card div.type{
+        padding-right: 0 !important;
+    }
+
+    #submitRequestPage .submit-card > div:first-child div.quote-id{
+        width: 60%;
+        font-size: 1rem;
+    }
+
+    .submission h4{
+        font-size: 1rem;
+    }
+
+    #submitRequestPage input[type="checkbox"]{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    #single-quote-selected .item-quote .description{
+        padding: 10px !important;
+    }
+
+    #single-quote-selected .item-quote, .section02\.1 .content .left img,.section02\.1 .content .left, .section02\.1 .content .right, .section02\.2 .content div .item,.section03 .list-icons > div,.section04\.1 .item-options{
+        width: 100% !important;
+    }
+
+    .section02\.2 .content div .item{
+        padding: 10px
+    }
+
+    #single-quote-selected .item-quote .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #single-quote-selected .item-quote .logo img {
+        width: 95%;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    #policy-features > div:first-child, .compare-page.form #upload-documents > div:first-child, .medical-insurance #upload-documents > div:nth-child(2){
+        flex-direction: column !important;
+    }
+
+    .section04\.1 > .row{
+        flex-direction: column;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .section03 .list-icons img{
+        width: 20%;
+    }
+
+    .section02\.1 .content .right, .section02\.2{
+        margin-top:10%
+    }
+
+    .section04\.1 .item-options{
+        height: fit-content;
+        margin: 1rem 0;
+    }
+
+    .section04\.1 .item-options a{
+        margin: 2rem 0 ;
+    }
+
+    .section05\.1 #FAQs .accordion-item .accordion-header button {
+        font-size: .9rem;
+        padding: 0.7rem 1.25rem;
+    }
+
+    .section05\.1 #FAQs .accordion-item .accordion-header .icon{
+        margin-right: 10px;
+        margin-left: 0!important;
+    }
+
+    .section05\.1 .accordion-collapse{
+        font-size: .8rem;
+    }
+
+    .section02\.1 .content .right .item-why{
+        justify-content: space-between !important;
+    }
+
+    .section02\.1 .item-why .icon{
+        width: 20vw !important;
+        height: 20vw !important;
+    }
+
+    .section02\.1 .right div.btn{
+        padding-left: 20vw !important;
+    }
+
+    .section02\.1 .right div.btn a{
+        width: 80% !important;
+        font-size: 1rem !important;
+    }
+
+    .background-quote{
+        display: none !important;
+    }
+
+    #Form{
+        width: 100%;
+    }
+
+    #policy-features .policy-item,#upload-documents .upload-item{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #submitRequestPage .submit-card, #policy-features .button, #upload-documents .button{
+        width: 100%;
+    }
+
+    #submitRequestPage .checkboxes, #submitRequestPage .submit-card, #submitRequestPage .button{
+        width: 100%;
+        flex-direction: column !important;
+    }
+
+    .options .option-container > div{
+        display: flex !important;
+        flex-direction: column !important;
+        height: 50vh !important;
+    }
+
+    .options .option-container .option-item{
+        padding: 20px;
+    }
+
+    #priceSection{
+        padding: 0 !important;
+    }
+
+    .quote .form .progress-main .checkpoints,.compare-page .progress-main{
+        bottom: 0 !important;
+    }
+
+    .quote .form .progress-main .car, .compare-page .compare-page .progress-main .car{
+        top: 1.7rem;
+        margin: 0 2rem !important;
+    }
+
+    .quote .form .progress-main .progress, .compare-page .progress-main .progress{
+        position: relative;
+        top: 0.7rem;
+        margin: 0 2rem !important;
+    }
+    .compare-page .progress-main{
+        margin: 10px auto !important;
+        width: 100% !important;
+    }
+
+    .quote .form .progress-main,.compare-page .progress-main{
+        font-size: .7rem ;
+    }
+
+    .compare-page .progress-main .car{
+        top: .2rem !important;
+        margin: 0 2rem !important;
+        width: 7% !important;
+    }
+
+    .compare-page  .progress-main .checkpoints{
+        bottom: 1.7rem !important;
+    }
+
+    #Form .btn-submit{
+        height: 8% !important;
+    }
+
+    .checkboxes > div{
+        justify-content: left !important;
+    }
+
+    .checkboxes p{
+        font-size: .8rem;
+    }
+
+    .submission h4:last-child{
+        text-align: right;
+    }
+
+    #submitRequestPage button{
+        width: 100% !important;
+        font-size: 1rem;
+    }
+
+
+    #listing-container table{
+        font-size: .7rem;
+    }
+
+    #listing-container table tr th {
+        padding: 5px 15px !important;
+    }
+    #listing-container table tr td h4{
+        font-size: 1rem;
+    }
+    #listing-container table tr td button {
+        height: 5% !important;
+    }
+
+    #listing-container table td{
+        padding: 10px !important;
+    }
+
+    #listing-container table tr td.main img{
+        width: 90%;
+    }
+
+    #listing-container table td img.double-check{
+        width: 40% !important;
+    }
+    #listing-container table tr td:not(.main) img.check{
+        width: 15px;
+        height: 15px;
+    }
+
+    .btn-download-quote{
+        font-size: 1rem !important;
+    }
+
+    .btn-download-quote img{
+        width: 15% !important;
+    }
+
+    #listing-container > div{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #listing-container .download-section .text-black{
+        display: block;
+    }
+
+    #listing-container > div div.back{
+        align-items: flex-start !important;
+    }
+    #listing-container > div div.download-section {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .compare-page .description{
+        font-size: .9rem;
+    }
+
+    .compare-page .description .row .col-4{
+        width: 40% !important;
+    }
+    .compare-page .description .row .col-7,.compare-page .description .row .col-4 {
+        padding: 5px;
+    }
+
+
+    .sections#type-insurance .type-container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sections#type-insurance .type-container .type,.medical-insurance #personalData,#personalData .input-fields .select div{
+        width: 100%;
+    }
+
+    #personalData .input-fields, #benefits-section .input-fields, .message-container,#messageSuccess .text{
+        width: 95% !important;
+    }
+
+    #personalData .input-fields .select{
+        flex-direction: column;
+    }
+
+    .medical-insurance.form .progress-main{
+        width: 100% !important;
+        font-size: .8rem;
+    }
+
+    .medical-insurance .progress-main .progress{
+        margin: 0 2rem;
+    }
+
+    #benefits-section .benefits-details-form .input-group.members{
+        grid-template-columns: 100%;
+    }
+
+    .contact-container .email, .claim-report-form .email{
+        flex-direction: column;
+    }
+
+    #contact-us .title-section p{
+        width: 90%;
+
+    }
+
+    #contact-us .contact-container{
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        padding-top: 1rem !important;
+    }
+
+
+    #contact-us .contact-container .form{
+        width: 100% !important;
+    }
+
+    .contact-info-section{
+        width: 100% !important;
+        padding:0 ;
+    }
+    .About-section1 h1{
+        margin-top: 5%;
+    }
+
+    .About-section1 h4{
+        font-size: 1rem;
+        margin-bottom: 3%;
+    }
+
+    .About-section1, .About-section2-title{
+        padding: 0;
+    }
+
+    .about-image img {
+        height: 25vh;
+        width: 100vw;
+    }
+
+    .About-section2 .content{
+        flex-direction: column-reverse;
+    }
+    .About-section2 .content > .left{
+        width: 100%;
+        margin-top: 3rem;
+        font-size: 1rem;
+    }
+
+    .About-section2 .item .icon{
+        width: 75px;
+        height: 75px;
+    }
+
+    .About-section2 .content .left .item .right p{
+        font-size: .8rem;
+    }
+
+    .About-section2 .content .left .item{
+        flex-direction: row;
+    }
+    .About-section2 .content .thumbnail img {
+        width: 95%;
+    }
+
+    .section06 > div{
+        padding: 0;
+    }
+
+    .section06 .content{
+        flex-direction: column
+    }
+
+    .swiper.testimonial{
+        padding: 20px !important;
+    }
+
+    .section06 .text,.section06 .form{
+        width: 100%;
+        padding: 1rem;
+    }
+
+
+    .service-page .service-container .image {
+        width: 100% !important;
+    }
+
+
+    footer .footer-container{
+        width: 100%;
+    }
+
+    footer .footer-container>div{
+        margin-bottom: 2rem;
+    }
+
+    .footer-container {
+        padding: 1rem;
+    }
+
+    .section06 .swiper{
+        margin-top: 3rem;
+    }
+
+    footer .social-media img, footer .location img{
+        width: 25px;
+        height: 25px;
+    }
+
+}

@@ -1,0 +1,1200 @@
+<!DOCTYPE>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Get a Quote</title>
+        <link rel="stylesheet" href="../lib/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../lib/datepicker/datepicker.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/responsive.css">
+        <link rel="stylesheet" href="../assets/css/wizard.css">
+        <link rel="stylesheet" href="../lib/dropzone/style.css" type="text/css" />
+
+    </head>
+    <body>
+        <div class="theme-navabar container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container-fluid mx-auto">
+                    <a class="navbar-brand" href="#"><h3>Insurance</h3></a>
+                    <button class="navbar-toggler" type="button" >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="close-btn">
+                            <?xml version="1.0"?><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/></svg>
+                        </div>
+                        <div class="navbar-nav me-auto mb-2 mb-lg-0" id="menuItems">
+                            <div class="nav-item mx-lg-2">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </div>
+                            <div class="nav-item dropdown mx-lg-2">
+                                <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div><a class="dropdown-item" href="#">Action</a></div>
+                                    <div><a class="dropdown-item" href="#">Another action</a></div>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown mx-lg-2">
+                                <a class="nav-link dropdown-toggle" href="#" id="requestDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Request
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div><a class="dropdown-item" href="#">Action</a></div>
+                                    <div><a class="dropdown-item" href="#">Another action</a></div>
+                                    <div><hr class="dropdown-divider"></div>
+                                    <div><a class="dropdown-item" href="#">Something else here</a></div>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown mx-lg-2">
+                                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div><a class="dropdown-item" href="#">Action</a></div>
+                                    <div><a class="dropdown-item" href="#">Another action</a></div>
+                                    <div><hr class="dropdown-divider"></div>
+                                    <div><a class="dropdown-item" href="#">Something else here</a></div>
+                                </div>
+                            </div>
+                            <div class="nav-item mx-lg-2">
+                                <a class="nav-link">News</a>
+                            </div>
+                            <div class="nav-item mx-lg-2">
+                                <a class="nav-link">FAQ</a>
+                            </div>
+                            <div class="nav-item mx-lg-2">
+                                <a class="nav-link">Contact</a>
+                            </div>
+                        </div>
+                        <div class="right d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a class="btn me-md-2 login" type="button">Login</a>
+                            <a href="quote.html" class="btn btn-primary px-xl-5 btn-theme" type="button">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="compare-page form">
+            <h2 class="text-center">Your <span class="text-primary">Quotation</span></h2>
+            <div class="progress-main">
+                <div class="progress">
+                    <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div>
+                    <div class="car">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.739 10.921c-1.347-.39-1.885-.538-3.552-.921 0 0-2.379-2.359-2.832-2.816-.568-.572-1.043-1.184-2.949-1.184h-7.894c-.511 0-.736.547-.07 1-.742.602-1.619 1.38-2.258 2.027-1.435 1.455-2.184 2.385-2.184 4.255 0 1.76 1.042 3.718 3.174 3.718h.01c.413 1.162 1.512 2 2.816 2 1.304 0 2.403-.838 2.816-2h6.367c.413 1.162 1.512 2 2.816 2s2.403-.838 2.816-2h.685c1.994 0 2.5-1.776 2.5-3.165 0-2.041-1.123-2.584-2.261-2.914zm-15.739 6.279c-.662 0-1.2-.538-1.2-1.2s.538-1.2 1.2-1.2 1.2.538 1.2 1.2-.538 1.2-1.2 1.2zm3.576-6.2c-1.071 0-3.5-.106-5.219-.75.578-.75.998-1.222 1.27-1.536.318-.368.873-.714 1.561-.714h2.388v3zm1-3h1.835c.882 0 1.428.493 2.022 1.105.452.466 1.732 1.895 1.732 1.895h-5.588v-3zm7.424 9.2c-.662 0-1.2-.538-1.2-1.2s.538-1.2 1.2-1.2 1.2.538 1.2 1.2-.538 1.2-1.2 1.2z"/></svg>
+                    </div>
+                    <div class="checkpoints">
+                        <div><div class="checkpoint"></div><div class="title">Car Details</div></div>
+                        <div><div class="checkpoint"></div><div class="title">Driving Details</div></div>
+                        <div><div class="checkpoint"></div><div class="title">Quotation</div></div>
+                        <div><div class="checkpoint"></div><div class="title">Submit</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-4">
+                        <div class="car-make label py-1">
+                            Car Make: <span class="text-black">Toyota</span>
+                        </div>
+                        <div class="car-model label py-1">
+                            Car Model : <span class="text-black">Altis 1.6</span>
+                        </div>
+                    </div>
+                    <div class="col-1 vr"></div>
+                    <div class="col-7 right">
+                        <div class="car-make label text-black">
+                            Model Year: <hr class="w-100 mx-lg-3 mx-1"/> 2021
+                        </div>
+                        <div class="car-model label text-black">
+                            Market Price : <hr class="w-100 mx-lg-3 mx-1"/> AED 23,445,888
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sections" id="quote-response">
+                <div class="quote-response mt-3">
+                    <h2>We Found The following <span class="text-primary">Insurance Quotes</span></h2>
+                    <div class="d-flex flex-lg-row flex-column-reverse justify-content-between align-items-center">
+                        <div class="filter d-flex flex-row align-items-center">
+                            <p class="mx-2 my-0">Show:</p>
+                            <div class="options-filter d-flex flex-row">
+                                <div class="active">All</div>
+                                <div class="">Comprehensive</div>
+                                <div class="">TPL</div>
+                            </div>
+                        </div>
+                        <div class="download-section d-flex flex-row align-items-center">
+                            <div class="quote-id mx-2">
+                                <h6 class="m-0 label">Quote Id: <span class="text-black">ib-1339</span></h6>
+                            </div>
+                            <div class="btn btn-download-quote">
+                                <img width="25" src="../assets/img/quote/download-button.png" alt="">
+                                Download Quote
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-options">
+                    <div class="quote-item">
+                        <button class="btn btn-compare">
+                            + Add to Compare
+                        </button>
+                        <div class="quote-description">
+                            <div class="quote-header d-flex flex-row">
+                                <div class="logo">
+                                    <img src="../assets/img/quote/insuranceicon.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <span class="text-primary">Premium</span>
+                                    <span class="text-bold">AED
+                            850.00</span>
+                                </div>
+                            </div>
+                            <div class="quote-title">
+                                <h3 class="m-0">Third Party Liability</h3>
+                                <h6 class="label">Classification: <span class="text-black">General</span></h6>
+                            </div>
+                            <hr class="mx-3">
+                            <div class="quote-specs">
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center  px-2">
+                                    <p>Fully Comprehensive Insurance</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Agency Repair</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Personal Accident Driver</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <p>AED 120.00</p>
+                                        <input class="form-check-input" type="checkbox" value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Personal Accident Passenger</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <p>AED 120.00</p>
+                                        <input class="form-check-input" type="checkbox" value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Third Party Property Damage Up To AED 2M</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseExample01">
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="show-more w-100 d-flex justify-content-center">
+                                    <button class="accordion-button collapsed btn-show-more" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample01" aria-expanded="false" aria-controls="collapseExample01">
+                                        Show More
+                                    </button>
+                                </div>
+                                <div class="select-btn">
+                                    <button class="btn btn-primary px-xl-5 btn-theme btn-select w-100">Select Quote</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <button class="btn btn-compare">
+                            + Add to Compare
+                        </button>
+                        <div class="quote-description">
+                            <div class="quote-header d-flex flex-row">
+                                <div class="logo">
+                                    <img src="../assets/img/quote/insuranceicon.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <span class="text-primary">Premium</span>
+                                    <span class="text-bold">AED
+                            850.00</span>
+                                </div>
+                            </div>
+                            <div class="quote-title">
+                                <h3 class="m-0">Third Party Liability</h3>
+                                <h6 class="label">Classification: <span class="text-black">General</span></h6>
+                            </div>
+                            <hr class="mx-3">
+                            <div class="quote-specs">
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center  px-2">
+                                    <p>Fully Comprehensive Insurance</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Agency Repair</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Personal Accident Driver</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <p>AED 120.00</p>
+                                        <input class="form-check-input" type="checkbox" value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Personal Accident Passenger</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <p>AED 120.00</p>
+                                        <input class="form-check-input" type="checkbox" value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Third Party Property Damage Up To AED 2M</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseExample02">
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="show-more w-100 d-flex justify-content-center">
+                                    <button class="accordion-button collapsed btn-show-more" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample02" aria-expanded="false" aria-controls="collapseExample">
+                                        Show More
+                                    </button>
+                                </div>
+                                <div class="select-btn">
+                                    <button class="btn btn-primary px-xl-5 btn-theme btn-select w-100">Select Quote</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <button class="btn btn-compare">
+                            + Add to Compare
+                        </button>
+                        <div class="quote-description">
+                            <div class="quote-header d-flex flex-row">
+                                <div class="logo">
+                                    <img src="../assets/img/quote/insuranceicon.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <span class="text-primary">Premium</span>
+                                    <span class="text-bold">AED
+                            850.00</span>
+                                </div>
+                            </div>
+                            <div class="quote-title">
+                                <h3 class="m-0">Third Party Liability</h3>
+                                <h6 class="label">Classification: <span class="text-black">General</span></h6>
+                            </div>
+                            <hr class="mx-3">
+                            <div class="quote-specs">
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center  px-2">
+                                    <p>Fully Comprehensive Insurance</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Agency Repair</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Personal Accident Driver</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <p>AED 120.00</p>
+                                        <input class="form-check-input" type="checkbox" value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Personal Accident Passenger</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <p>AED 120.00</p>
+                                        <input class="form-check-input" type="checkbox" value="" >
+                                    </div>
+                                </div>
+                                <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                    <p>Third Party Property Damage Up To AED 2M</p>
+                                    <div class="add-spec d-flex flex-row align-items-center">
+                                        <input class="form-check-input" type="checkbox" checked value="" >
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseExample04">
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                    <div class="spec-item d-flex flex-row justify-content-between align-items-center px-2">
+                                        <p>Third Party Property Damage Up To AED 2M</p>
+                                        <div class="add-spec d-flex flex-row align-items-center">
+                                            <input class="form-check-input" type="checkbox" checked value="" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="show-more w-100 d-flex justify-content-center">
+                                    <button class="accordion-button collapsed btn-show-more" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample04" aria-expanded="false" aria-controls="collapseExample">
+                                        Show More
+                                    </button>
+                                </div>
+                                <div class="select-btn">
+                                    <button class="btn btn-primary px-xl-5 btn-theme btn-select w-100">Select Quote</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sections" id="listing-container" >
+                <div class="d-flex justify-content-between">
+                    <div class="back d-flex flex-row">
+                        <a href="#" class="mx-2 my-0">< Back to listing</a>
+                    </div>
+                    <div class="download-section d-flex flex-row align-items-center">
+                        <div class="quote-id mx-2">
+                            <h6 class="m-0 label">Quote Id: <span class="text-black">ib-1339</span></h6>
+                        </div>
+                        <div class="btn btn-download-quote">
+                            <img width="25" src="../assets/img/quote/download-button.png" alt="">
+                            Download Quote
+                        </div>
+                    </div>
+                </div>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th class="headcol">Options</th>
+                            <th>Alsagr Insurance <span>Comprehensive</span> </th>
+                            <th>Watania Insurance <span>Comprehensive</span> </th>
+                            <th>Watania Insurance <span>Comprehensive</span> </th>
+                            <th>Watania Insurance <span>Comprehensive</span> </th>
+                            <th>Watania Insurance <span>Comprehensive</span> </th>
+                            <th>Watania Insurance <span>Comprehensive</span> </th>
+
+                        </tr>
+                        <tr>
+                            <td class="headcol">Price</td>
+                            <td class="main">
+                                <img class="icon my-2" src="../assets/img/quote/insuranceicon.png">
+                                <h4 class="my-2" >AED 1,850</h4>
+                                <button class="btn btn-primary px-xl-5 btn-theme btn-buy w-100 my-2">Buy</button>
+                            </td>
+                            <td class="main">
+                                <img class="icon my-2" src="../assets/img/quote/insuranceicon.png">
+                                <h4 class="my-2" >AED 1,850</h4>
+                                <button class="btn btn-primary px-xl-5 btn-theme btn-buy w-100 my-2">Buy</button>
+                            </td>
+                            <td class="main">
+                                <img class="icon my-2" src="../assets/img/quote/insuranceicon.png">
+                                <h4 class="my-2" >AED 1,850</h4>
+                                <button class="btn btn-primary px-xl-5 btn-theme btn-buy w-100 my-2">Buy</button>
+                            </td>
+                            <td class="main">
+                                <img class="icon my-2" src="../assets/img/quote/insuranceicon.png">
+                                <h4 class="my-2" >AED 1,850</h4>
+                                <button class="btn btn-primary px-xl-5 btn-theme btn-buy w-100 my-2">Buy</button>
+                            </td>
+                            <td class="main">
+                                <img class="icon my-2" src="../assets/img/quote/insuranceicon.png">
+                                <h4 class="my-2" >AED 1,850</h4>
+                                <button class="btn btn-primary px-xl-5 btn-theme btn-buy w-100 my-2">Buy</button>
+                            </td>
+                            <td class="main">
+                                <img class="icon my-2" src="../assets/img/quote/insuranceicon.png">
+                                <h4 class="my-2" >AED 1,850</h4>
+                                <button class="btn btn-primary px-xl-5 btn-theme btn-buy w-100 my-2">Buy</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Agency Repair</td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Personal Accident Passenger</td>
+                            <td>AED 120</td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Personal Accident Driver</td>
+                            <td>AED 120</td>
+                            <td>AED 120</td>
+                            <td>AED 120</td>
+                            <td>AED 120</td>
+                            <td>AED 120</td>
+                            <td>AED 120</td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Roadside Assistant</td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                            <td><img class="double-check my-2" src="../assets/img/quote/doublecheck.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Own Damage cover</td>
+                            <td>UAE only</td>
+                            <td>Oman & UAE only</td>
+                            <td>Oman & UAE only</td>
+                            <td>Oman & UAE only</td>
+                            <td>Oman & UAE only</td>
+                            <td>Oman & UAE only</td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Third Part Limit</td>
+                            <td>Upto AED 20,000,00</td>
+                            <td>Upto AED 20,000,00</td>
+                            <td>Upto AED 20,000,00</td>
+                            <td>Upto AED 20,000,00</td>
+                            <td>Upto AED 20,000,00</td>
+                            <td>Upto AED 20,000,00</td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Excess Amount</td>
+                            <td>AED 1000</td>
+                            <td>AED 1000</td>
+                            <td>AED 1000</td>
+                            <td>AED 1000</td>
+                            <td>AED 1000</td>
+                            <td>AED 1000</td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Road Side Assistant</td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Highlights</td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet <span class="text-bold">AED 150</span> </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet <span class="text-bold">AED 150</span> </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet <span class="text-bold">AED 150</span> </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet <span class="text-bold">AED 150</span> </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet <span class="text-bold">AED 150</span> </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet <span class="text-bold">AED 150</span> </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet <span class="text-bold">AED 150</span> </p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Fusce mattis felis quis urna fermentum maximus</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Lorem ipsum dolor sit amet</p>
+                                </div>
+                                <div class="d-flex flex-row text-start my-2">
+                                    <img class="check" width="25" height="25" src="../assets/img/quote/checkBox.png" alt="">
+                                    <p class="ms-2 mb-0 lh-base">Praesent sed facilisis felis. Morbi vitae magna et felis laoreet </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="headcol">Special Features</td>
+                            <td>Vivamus et lorem eu leo.
+                                Etiam dignissim eros aliquet pharetra.
+                                Curabitur sagittis enim.</td>
+                            <td>Vivamus et lorem eu leo.
+                                Etiam dignissim eros aliquet pharetra.
+                                Curabitur sagittis enim.
+                                Cras euismod metus ac  dignissim.</td>
+                            <td>Vivamus et lorem eu leo.
+                                Etiam dignissim eros aliquet pharetra.
+                                Curabitur sagittis enim.
+                                Cras euismod metus ac  dignissim.</td>
+                            <td>Vivamus et lorem eu leo.
+                                Etiam dignissim eros aliquet pharetra.
+                                Curabitur sagittis enim.
+                                Cras euismod metus ac  dignissim.</td>
+                            <td>Vivamus et lorem eu leo.
+                                Etiam dignissim eros aliquet pharetra.
+                                Curabitur sagittis enim.
+                                Cras euismod metus ac  dignissim.</td>
+                            <td>Vivamus et lorem eu leo.
+                                Etiam dignissim eros aliquet pharetra.
+                                Curabitur sagittis enim.
+                                Cras euismod metus ac  dignissim.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="sections" id="single-quote-selected" >
+                <div class="item-quote">
+                    <div class="header d-flex flex-row ">
+                        <div class="logo">
+                            <img src="../assets/img/quote/insuranceicon.png" />
+                        </div>
+                        <div class="price d-flex flex-column align-content-center justify-content-center">
+                            <p class="p-0 m-0">Premium</p>
+                            <h5 class="p-0 m-0">AED 880.00</h5>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h6>Quote Id:  <span class="text-black">ib-1339</span></h6>
+                        <h3>Third Party Liability</h3>
+                        <div class="specs">
+                            <div class="d-flex flex-row justify-content-between"><p class="p-0 mb-2">Car Name:</p><p class="p-0 mb-1">Alpha Romeo</p></div>
+                            <div class="d-flex flex-row justify-content-between"><p class="p-0 mb-2">Car Model:</p><p class="p-0 mb-2">Altis 1.6</p></div>
+                            <div class="d-flex flex-row justify-content-between"><p class="p-0 mb-2">Model Year:</p><p class="p-0 mb-2">2021</p></div>
+                            <div class="d-flex flex-row justify-content-between"><p class="p-0 mb-2">Market Price:</p><p class="p-0 mb-2">AED 23,445,888</p></div>
+                        </div>
+                        <div class="button">
+                            <button class="btn btn-primary px-xl-5 btn-theme btn-next w-100 my-2">Next ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sections" id="policy-features">
+                <div class="d-flex justify-content-between ">
+                    <div class="policy-item">
+                        <h3>Benefit Covered</h3>
+                        <hr class="my-4">
+                        <div class="specs">
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <h3>Add-Ons</h3>
+                        <hr class="my-4">
+                        <div class="specs">
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <h3>Additionals</h3>
+                        <hr class="my-4">
+                        <div class="specs">
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Cras vel lectus a nunc hendrerit viverra.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                            <div class="spec-item d-flex flex-row align-items-center justify-content-between mb-3"> <p class="mb-0">Nam id felis ac neque aliquam.</p> <img src="../assets/img/quote/checkBox.png" alt=""> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button mt-4">
+                    <button class="btn btn-primary px-xl-5 btn-theme btn-next w-100 my-2">Next ></button>
+                </div>
+            </div>
+            <div class="sections" id="upload-documents">
+                <div class="d-flex flex-row justify-content-between mt-5">
+                    <div class="upload-item">
+                        <h3>Registration Card</h3>
+                        <p class="m-0 p-0">Sed consectetur neque et mauris varius.</p>
+                        <div class="dropzone-item d-flex flex-column align-items-center mt-4" id="reg-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+                            </svg>
+                            <p>Drag and Drop Your Document</p>
+                        </div>
+                    </div>
+                    <div class="upload-item">
+                        <h3>Registration Card</h3>
+                        <p class="m-0 p-0">Sed consectetur neque et mauris varius.</p>
+                        <div class="dropzone-item d-flex flex-column align-items-center mt-4" id="driving-lsc">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+                            </svg>
+                            <p>Drag and Drop Your Document</p>
+                        </div>
+                    </div>
+                    <div class="upload-item">
+                        <h3>Registration Card</h3>
+                        <p class="m-0 p-0">Sed consectetur neque et mauris varius.</p>
+                        <div class="dropzone-item d-flex flex-column align-items-center mt-4" id="clain-cert">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+                            </svg>
+                            <p>Drag and Drop Your Document</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button mt-4 ">
+                    <button class="btn btn-primary px-xl-5 btn-theme btn-next w-100 my-2">Next ></button>
+                </div>
+
+            </div>
+            <div class="sections" id="submitRequestPage">
+                <div class="submit-page-title">
+                    <h2 class="text-center fw-bold">
+                        Submit Request with <span class="text-primary">One Click!</span>
+                    </h2>
+                </div>
+                <div class="submit-card">
+                    <div class="d-flex p-lg-5 p-3 flex-row align-items-center justify-content-between">
+                        <div class="logo">
+                            <img src="../assets/img/quote/insuranceicon.png" alt="">
+                        </div>
+                        <div class="vr"></div>
+
+                        <div class="quote-id">
+                            <p><span class="text">Quote id:</span> <span>ib-1339</span></p>
+                            <h4 class="fw-bold">Lorem Ipsum Dollar</h4>
+                        </div>
+                    </div>
+                    <div class="invoice px-lg-5 px-3 ">
+                        <div class="invoice-item d-flex flex-row justify-content-between"><h5>Subtotal:</h5>  <p>AED 880.00</p> </div>
+                        <div class="invoice-item d-flex flex-row justify-content-between"><h5>5% Vat:</h5>  <p>AED 44.00</p> </div>
+                    </div>
+                    <hr class="submit-card-horizontal-line" />
+                    <div class="mx-lg-5 py-lg-5 mx-3 py-3">
+                        <div class="submission d-flex flex-row justify-content-between"><h4 class="text-bold">Total Amount Due:</h4>  <h4 class="text-black">AED 924.00</h4> </div>
+                    </div>
+                </div>
+                <div class="checkboxes d-flex flex-row justify-content-between py-4 ">
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <input
+                                class="form-check-input me-lg-3 me-2"
+                                type="checkbox"
+                                id="check1"
+                                name="option1"
+                                value="something"
+                        />
+                        <p class="m-0">I have read and agree to the Terms & Conditions.</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <input
+                                class="form-check-input me-lg-3 me-2"
+                                type="checkbox"
+                                id="check2"
+                                name="option1"
+                                value="something"
+                        />
+                        <p class="m-0">I have read and agree to the Privacy Policy.</p>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="btn btn-primary btn-theme btn-next w-50" type="button">
+                        Submit Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="selected-options">
+            <div class="d-flex flex-column flex-lg-row gap-lg-5 gap-1 ">
+                <div class="options-list d-flex flex-column flex-lg-row gap-lg-5 gap-1 ">
+                    <div class="option bg-white d-flex ">
+                        <div class="logo">
+                            <img src="../assets/img/quote/insuranceicon.png" alt="">
+                        </div>
+                        <div class="desc d-flex align-items-center">
+                            <div class="content">
+                                <h6>Third Party Liability</h6>
+                                <p>Total</p>
+                                <h4>AED 23,445</h4>
+                            </div>
+                            <button type="button" class="btn-close btn-close-black ms-3" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="option empty">
+                        Add to Compare
+                    </div>
+                </div>
+                <div class="btns flex-lg-column flex-row">
+                    <button class="btn btn-primary px-xl-5 btn-theme btn-compare-all w-100">Compare All</button>
+                    <button class="btn btn-primary px-xl-5 btn-clear w-100">Clear All</button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container row">
+                <div class="brief col-lg-4 p-lg-3">
+                    <h2 class="pb-2">Insurance</h2>
+                    <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae facilisis enim, sed semper enim. Suspendisse ac ligula imperdiet, lobortis orci in</p>
+                    <div class="social-media d-flex flex-row justify-content-between">
+                        <a href="#"><img src="../assets/img/footer/facebook.png" alt=""></a>
+                        <a href="#"><img src="../assets/img/footer/twitter.png" alt=""></a>
+                        <a href="#"><img src="../assets/img/footer/insta.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="links container col-lg-4  d-flex flex-row">
+                    <div class="p-lg-3">
+                        <h4 class="pb-lg-3">Useful Links</h4>
+                        <a href="">About Us</a>
+                        <a href="">FAQs</a>
+                        <a href="">Contact US</a>
+                    </div>
+                    <div class="p-lg-3">
+                        <h4 class="pb-lg-3">Helpful Links</h4>
+                        <a href="">Terms and Conditions</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Discliamer</a>
+                    </div>
+                </div>
+                <div class="desc col-lg-4 p-lg-3">
+                    <div class="location d-flex mb-4">
+                        <img src="../assets/img/footer/gps.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="contact d-flex flex-row justify-content-between align-items-center mb-4">
+                        <div class="phone d-flex align-items-center ">
+                            <img class="me-lg-2" src="../assets/img/footer/phone.png" alt="">
+                            <p class="m-0 p-0">123-456-789</p>
+                        </div>
+                        <div class="email d-flex align-items-center ">
+                            <img class="me-1 me-lg-2" src="../assets/img/footer/email.png" alt="">
+                            <p class="m-0 p-0">info@mail.com</p>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <p class="m-0 p-0">We Accept:</p>
+                        <div class="payment-icons">
+                            <img class="me-lg-2" src="../assets/img/footer/visa.png" alt="">
+                            <img class="me-lg-2" src="../assets/img/footer/master.png" alt="">
+                            <img class="me-lg-2" src="../assets/img/footer/apple.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../lib/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/choices.js"></script>
+        <script src="../lib/dropzone/index.js"></script>
+        <script src="../assets/js/index.js"></script>
+        <script>
+            let progress = 72, add = 6
+            $("#progressBar").css("width", `${progress}%`)
+            $(".progress-main .car").css("left", `${progress - 8}%`) // Animate the Car
+
+            let checkpoint = $(".checkpoint")
+            $(checkpoint[0]).addClass("complete")
+            $(checkpoint[1]).addClass("complete")
+            $(checkpoint[2]).addClass("complete")
+
+            $(".sections").hide()
+            $(".sections#quote-response").show()
+
+            $(".selected-options").hide()
+
+            $(".btn-clear").click(function () {
+
+                $(".selected-options").hide()
+            })
+
+
+            $(".btn-compare").click(function () {
+                let box = $(".selected-options")
+                let quotes = parseInt($(".selected-options .option:not(.empty)").length)
+
+                if(quotes >= 2){
+                    $(".options-list").append(`<div class="option bg-white d-flex ">
+                        <div class="logo">
+                            <img src="../assets/img/quote/insuranceicon.png" alt="">
+                        </div>
+                        <div class="desc d-flex align-items-center">
+                            <div class="content">
+                                <h6>Third Party Liability</h6>
+                                <p>Total</p>
+                                <h4>AED 23,445</h4>
+                            </div>
+                            <button type="button" class="btn-close btn-close-black ms-3" aria-label="Close"></button>
+                        </div>
+                    </div>`)
+                }else if (box.css("display")!="none"){
+                    let empty = $(".selected-options .option.empty")
+
+                    empty.removeClass("empty").empty().addClass("bg-white d-flex")
+                    empty.append(`<div class="logo">
+                                    <img src="../assets/img/quote/insuranceicon.png" alt="">
+                                </div>
+                                <div class="desc d-flex align-items-center">
+                                    <div class="content">
+                                        <h6>Third Party Liability</h6>
+                                        <p>Total</p>
+                                        <h4>AED 23,445</h4>
+                                    </div>
+                                    <button type="button" class="btn-close btn-close-black ms-3" aria-label="Close"></button>
+                                </div>`)
+                }else {
+                    $(".selected-options").show()
+                }
+            })
+
+
+            
+            $(".selected-options .btn-compare-all").click(function () {
+                $(".selected-options,.compare-page > .description,.sections#quote-response").hide()
+                $(".sections#listing-container").show()
+
+            })
+
+            $(".select-btn").click(function () {
+                $(".selected-options,.compare-page > .description,.sections#quote-response").hide()
+                $(".sections#single-quote-selected").show()
+            })
+
+            $(".sections#listing-container .btn-buy").click(function (e) {
+                $(".sections#listing-container").hide()
+                $(".sections#single-quote-selected").show()
+            })
+
+            $(".sections#single-quote-selected .btn-next").click(function (e) {
+                $(".sections#single-quote-selected").hide()
+                $(".sections#policy-features").show()
+                progress+=add
+                $("#progressBar").css("width", `${progress}%`)
+                $(".progress-main .car").css("left", `${progress - 10}%`) // Animate the Car
+            })
+
+            $(".sections#policy-features .btn-next").click(function (e) {
+                $(".sections#policy-features").hide()
+                $(".sections#upload-documents").show()
+                progress+=add
+                $("#progressBar").css("width", `${progress}%`)
+                $(".progress-main .car").css("left", `${progress - 10}%`) // Animate the Car
+            })
+
+            $(".sections#upload-documents .btn-next").click(function () {
+                $(".sections#upload-documents").hide()
+                $(".sections#submitRequestPage").show()
+                progress+=add
+                $("#progressBar").css("width", `${progress}%`)
+                $(".progress-main .car").css("left", `${progress - 10}%`) // Animate the Car
+            })
+
+            $("div#reg-card").dropzone({
+                url: "#",
+                addedfile: file => {
+                //Handle Added Files
+                    let parent = $("div#reg-card")
+                    parent.empty()
+                    parent.append(`<h5>${file.upload.filename}</h5>`)
+                    console.log(file)
+
+                }
+            });
+
+            $("div#driving-lsc").dropzone({
+                url: "#",
+                addedfile: file => {
+                    //Handle Added Files
+                    let parent = $("div#driving-lsc")
+                    parent.empty()
+                    parent.append(`<h5>${file.upload.filename}</h5>`)
+                    console.log(file)
+                }
+            });
+
+            $("div#clain-cert").dropzone({
+                url: "#",
+                addedfile: file => {
+                    //Handle Added Files
+                    let parent = $("div#clain-cert")
+                    parent.empty()
+                    parent.append(`<h5>${file.upload.filename}</h5>`)
+                    console.log(file)
+                }
+            });
+
+
+            $("div.dropzone-item svg,div.dropzone-item p").click(function (e) {
+                $(this).parent().trigger("click")
+            })
+
+
+        </script>
+    </body>
+</html>
