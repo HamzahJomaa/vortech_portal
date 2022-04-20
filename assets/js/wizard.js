@@ -1,4 +1,88 @@
 $(document).ready(() => {
+    var multipleCancelButton = new Choices($("#choices-multiple-remove-button")[0], {
+        removeItemButton: true,
+        maxItemCount:5,
+        searchResultLimit:5,
+        renderChoiceLimit:5
+    });
+    const RemoveItem = () => {
+        let section = $("#option-wrapper div").attr("id")
+        let lastItem = $(".choices__list.choices__list--multiple div")[$(".choices__list.choices__list--multiple div").length - 1]
+        lastItem.remove()
+        percent -= add
+        $("#progressBar").css("width", `${percent}%`)
+        $(".progress-main .car").css("left", `${percent - 4}%`)
+
+
+
+        if (section === "modelSection") {
+            $(".question h2").empty().append(`What is your<span class="text-primary">car's brand?</span>`)
+            renderElement(cars, "carSection")
+        } else if (section === "specSection") {
+            $(".question h2").empty().append(`What is your <span class="text-primary">${result.car.title} model?</span>`)
+            renderElement(models, "modelSection")
+        } else if (section === "yearSection") {
+            $(".question h2").empty().append(`What is your <span class="text-primary">${result.car.title} specification?</span>`)
+            renderElement(spec, "specSection")
+        } else if (section === "citySection") {
+            $(".question h2").empty().append(`What is the year of <span class="text-primary">manufacture of your Car?</span>`)
+            renderElement(year, "yearSection")
+        } else if (section === "priceSection") {
+            $(".question h2").empty().append("What is your car's <span class='text-primary'> city of registration?</span>")
+            renderElement(city, "citySection")
+            $(".select-box").show()
+        } else if (section === "expSection") {
+            $(".select-box").hide()
+            $(".question h2").empty().append("What is the<span class='text-primary'> value of your car?</span>")
+            renderSlider(minPrice, maxPrice)
+        } else if (section === "certSection") {
+            $(".question h2").empty().append("Do you have a No Claims Certificate from <span class='text-primary'> your insurer(s)?</span>")
+            renderElement(experience, "expSection")
+        } else if (section === "cmpSection") {
+            $(".question h2").empty().append("What is your current <span class='text-primary'> insurance company?</span>")
+            renderElement(cert, "certSection")
+        } else if (section === "monthSection") {
+            $(".question h2").empty().append("What is your current <span class='text-primary'> insurance company?</span>")
+            renderElement(cmpSection, "cmpSection", )
+        } else {
+            $(".options").show()
+            $(".select-box").show()
+            $(".question").show()
+            $(".personal-form").hide()
+            $(".question h2").empty().append("What is your<span class='text-primary'> policy expiry month?</span>")
+
+            $("#option-wrapper").empty().append(`<div id='monthSection' class="row mt-2">
+                                    <div class="col-12 col-lg-6 mt-2 ">
+                                        <select class="form-select year" aria-label="Default select example">
+                                            <option selected disabled hidden>Year</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-lg-6 mt-2">
+                                        <select disabled class="form-select month" aria-label="Default select example">
+                                            <option selected disabled hidden>Month</option>
+                                        </select>
+                                    </div>
+                                 </div>`)
+
+            month.map(element=>{
+                $("#monthSection .month").append(`<option value="${element.id}">${element.title}</option>`)
+            })
+        }
+    }
+    
+
+    $("body").on("click","#options__close",RemoveItem)
+
+    // Back Button Functionality
+    $(".btn-back").click(RemoveItem)
+    
+    
+    
 
     $('[data-toggle="datepicker"]').datepicker();
 
@@ -183,79 +267,9 @@ $(document).ready(() => {
 
 
 
-    // Back Button Functionality
-    $(".btn-back").click(function() {
-        let section = $("#option-wrapper div").attr("id")
-        let lastItem = $(".choices__list.choices__list--multiple div")[$(".choices__list.choices__list--multiple div").length - 1]
-        lastItem.remove()
-        percent -= add
-        $("#progressBar").css("width", `${percent}%`)
-        $(".progress-main .car").css("left", `${percent - 4}%`)
+    
 
-
-
-        if (section === "modelSection") {
-            $(".question h2").empty().append(`What is your<span class="text-primary">car's brand?</span>`)
-            renderElement(cars, "carSection")
-        } else if (section === "specSection") {
-            $(".question h2").empty().append(`What is your <span class="text-primary">${result.car.title} model?</span>`)
-            renderElement(models, "modelSection")
-        } else if (section === "yearSection") {
-            $(".question h2").empty().append(`What is your <span class="text-primary">${result.car.title} specification?</span>`)
-            renderElement(spec, "specSection")
-        } else if (section === "citySection") {
-            $(".question h2").empty().append(`What is the year of <span class="text-primary">manufacture of your Car?</span>`)
-            renderElement(year, "yearSection")
-        } else if (section === "priceSection") {
-            $(".question h2").empty().append("What is your car's <span class='text-primary'> city of registration?</span>")
-            renderElement(city, "citySection")
-            $(".select-box").show()
-        } else if (section === "expSection") {
-            $(".select-box").hide()
-            $(".question h2").empty().append("What is the<span class='text-primary'> value of your car?</span>")
-            renderSlider(minPrice, maxPrice)
-        } else if (section === "certSection") {
-            $(".question h2").empty().append("Do you have a No Claims Certificate from <span class='text-primary'> your insurer(s)?</span>")
-            renderElement(experience, "expSection")
-        } else if (section === "cmpSection") {
-            $(".question h2").empty().append("What is your current <span class='text-primary'> insurance company?</span>")
-            renderElement(cert, "certSection")
-        } else if (section === "monthSection") {
-            $(".question h2").empty().append("What is your current <span class='text-primary'> insurance company?</span>")
-            renderElement(cmpSection, "cmpSection", )
-        } else {
-            $(".options").show()
-            $(".select-box").show()
-            $(".question").show()
-            $(".personal-form").hide()
-            $(".question h2").empty().append("What is your<span class='text-primary'> policy expiry month?</span>")
-
-            $("#option-wrapper").empty().append(`<div id='monthSection' class="row mt-2">
-                                    <div class="col-12 col-lg-6 mt-2 ">
-                                        <select class="form-select year" aria-label="Default select example">
-                                            <option selected disabled hidden>Year</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 col-lg-6 mt-2">
-                                        <select disabled class="form-select month" aria-label="Default select example">
-                                            <option selected disabled hidden>Month</option>
-                                        </select>
-                                    </div>
-                                 </div>`)
-
-            month.map(element=>{
-                $("#monthSection .month").append(`<option value="${element.id}">${element.title}</option>`)
-            })
-        }
-
-    })
-
-
+    
 
 
 
